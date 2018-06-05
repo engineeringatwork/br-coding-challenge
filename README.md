@@ -25,7 +25,7 @@
 4. Invoke the gradle command 'gradle clean build' to generate the executable jar. You should see a bootJar task get executed which will package the executable jar in the build\libs directory as rocket-coding-challenge-1.0.jar. 
 5. From there you can execute 'java -jar rocket-coding-challenge-1.0.jar' where you will see the following output.
 
-
+![boot_screen](https://user-images.githubusercontent.com/26190211/40958165-e74d9706-685d-11e8-924d-18b0e234f383.GIF)
 
 ## High Level Design Approach
 
