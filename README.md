@@ -62,10 +62,11 @@ You should see a representative JSON result come back from the API as shown here
 
 If you want to see a specific show information and its associated media assets associated a user can invoke a GET request at http://localhost:8080/v1/bottlerocket/media/containers/{id} with the identifier for the media container based on the previous endpoint's response output.
 
-## Future Areas to Explore to improve project:
+## Future Areas to Explore on baseline to mature it further given more time:
 
-1. Add a GCP Cloud Function/AWS Lambda endpoint that interacts with a open source API such as Trakt.tv to consume live media content such as shows and pulls associated content for the show. 
-2. Authentication/Authorization of Endpointst to make endpoints HTTPS and validate OAuth2 tokens prior to invokation.
+1. Authentication/Authorization of Endpoints to protect API resource data access using OAuth 2 JSON Web Tokens (JWT).
+2. Add creation/update endpoints (POST/PUT) to support creation of new media containers, media assets, and even new lookup options for the Container Types, Media Types, and Video Types.
+3. Add a GCP Cloud Function/AWS Lambda endpoint that interacts with a open source API such as Trakt.tv to consume live media content such as shows and pulls associated content for the show. 
 
 ## Closing Remarks
 
