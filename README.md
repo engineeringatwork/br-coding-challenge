@@ -19,11 +19,10 @@
 3. Favorite IDE (Eclipse, IntelliJ, etc)
 
 ## Instructions for getting it running locally:
-1. Clone the repository or download the zip file.
-2. Unzip the folder if you downloaded the zip file.
-3. Bring in the project in your favorite IDE as a Gradle Project or if Windows recognizes gradle on PATH open a command prompt and redirect to the directory that the project was unzipped.
-4. Invoke the gradle command 'gradle clean build' to generate the executable jar. You should see a bootJar task get executed which will package the executable jar in the build\libs directory as rocket-coding-challenge-1.0.jar. 
-5. From there you can execute 'java -jar rocket-coding-challenge-1.0.jar' where you will see the following output.
+1. Clone the repository or download the zip file to a local file and unzip it.
+2. Bring in the project in your favorite IDE as a Gradle Project or if Windows recognizes gradle on PATH open a command prompt and redirect to the directory that the project was unzipped.
+3. Invoke the gradle command 'gradle clean build' to generate the executable jar. You should see a bootJar task get executed which will package the executable jar in the build\libs directory as rocket-coding-challenge-1.0.jar. 
+4. From there you can execute 'java -jar rocket-coding-challenge-1.0.jar' where you will see the following output.
 
 ![boot_screen](https://user-images.githubusercontent.com/26190211/40958165-e74d9706-685d-11e8-924d-18b0e234f383.GIF)
 
@@ -33,7 +32,11 @@ The application was developed as a micro service application using Spring Boot t
 
 The application leverages the Factory Pattern to encapsulate creation logic for media assets that are relevant to the media container. For this initial coding challenge, a ShowAssetFactory was developed to encapsulate the specific logic on instantiating the videos, images, and advertisements related to a story. Future factories can be developed in the future that support creating new media assets as new media containers such as Movies, Music Albums as introduced into the platform. Application leverages the Adapter pattern to do the necessary transforms between the Business Object representation and the View representation on the object to provide an easily consumable payload for the interface. 
 
+### Application Architecture
+
 The Application has been designed with a clear separation of concerns that provide the necessary interfaces between the database access tier and view model tier that enable flexibility of swapping out the implementations as needed in the future. Application also leverages dependency injection principles to bring in dependant components and services that support these layers.
+
+![application_layered_architecture](https://user-images.githubusercontent.com/26190211/40993385-2016e2fc-68bf-11e8-9195-4571d7fc57f8.PNG)
 
 ## API Endpoints
 
