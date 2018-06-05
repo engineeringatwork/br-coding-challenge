@@ -29,11 +29,11 @@
 
 ## High Level Design Approach
 
-Application was developed as micro service application that can be deployed out on cloud provider of your choice. The application has an REST based API Tier that enable any user interface to consume the content through standard HTTP calls.The application is self-contained as a fat jar with embedded Tomcat 8.5.31 web server already included within it. The application is leveraging an embedded in-memory H2 database that stores the database schema.
+The application was developed as a micro service application using Spring Boot that can be deployed out on cloud provider of your choice. The application has a REST based API endpoints that enable any user interface to consume the content through standard HTTP calls.The application is self-contained as a fat jar with embedded Tomcat 8.5.31 web server already included within it. The application is leveraging an embedded in-memory H2 database that stores the database schema to remove any install dependencies but can easily be swapped out to bind to a JPA compliant RDBMS as needed (e.g MySQL, PostGres, Oracle).
 
-Application leverages the Factory Pattern to encapsulate creation logic for media assets that are relevant to the media container. For this initial coding challenge, a ShowAssetFactory was developed to encapsulate the specific logic on instantiating the videos, images, and advertisements related to a story. Future factories can be developed in the future that support creating new media assets as new media containers such as Movies, Music Albums as introduced into the platform. Application leverages the Adapter pattern to do the necessary transforms between the Business Object representation and the View representation on the object to provide an easily consumable payload for the interface. 
+The application leverages the Factory Pattern to encapsulate creation logic for media assets that are relevant to the media container. For this initial coding challenge, a ShowAssetFactory was developed to encapsulate the specific logic on instantiating the videos, images, and advertisements related to a story. Future factories can be developed in the future that support creating new media assets as new media containers such as Movies, Music Albums as introduced into the platform. Application leverages the Adapter pattern to do the necessary transforms between the Business Object representation and the View representation on the object to provide an easily consumable payload for the interface. 
 
-Application has a clear separation of layers that provide the necessary separation of concerns between the database access tier and view model tier that all adhere to interfaces enabling flexibility of swapping out the implementations as needed in the future. Application also leverages dependency injection principles to bring in dependant components and services that support these layers.
+The Application has been designed with a clear separation of concerns that provide the necessary interfaces between the database access tier and view model tier that enable flexibility of swapping out the implementations as needed in the future. Application also leverages dependency injection principles to bring in dependant components and services that support these layers.
 
 ## API Endpoints
 
@@ -53,7 +53,11 @@ You should see a representative JSON result come back from the API as shown here
 
 If you want to see a specific show information and its associated media assets associated a user can invoke a GET request at http://localhost:8080/v1/bottlerocket/media/containers/{id} with the identifier for the media container based on the previous endpoint's response output.
 
+## Future Areas to Explore to improve project:
 
+1. Add a GCP Cloud Function/AWS Lambda endpoint that interacts with a open source API such as Trakt.tv to consume live media content such as shows and pulls associated content for the show. 
+2. Authentication/Authorization of Endpointst to make endpoints HTTPS and validate OAuth2 tokens prior to invokation.
 
+## Closing Remarks
 
-
+I hope this sample application provides you a demonstraton of my expertise in providing Bottle Rocket the out of the box thinking and work ethic in going above and beyond the customer requirement to provide a compelling experience to our customers to make Bottle Rocket the partner of choice.
