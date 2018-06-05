@@ -38,6 +38,12 @@ The Application has been designed with a clear separation of concerns that provi
 
 ![application_layered_architecture](https://user-images.githubusercontent.com/26190211/40993385-2016e2fc-68bf-11e8-9195-4571d7fc57f8.PNG)
 
+### Database Architecture
+
+The application was designed with flexibility in mind and being able to introduce new media assets in the future as needed that inherit from Media Asset base table. The below is the ERD model developed to support the requirements.
+
+![coding_challenge_domain_model](https://user-images.githubusercontent.com/26190211/40994382-a6468182-68c1-11e8-9590-566ddd4df351.PNG)
+
 ## API Endpoints
 
 The Lookup Endpoint Resource is a set of API interfaces to retrieve common lookup information such as the various types of media assets, the types of video for video assets to capture movie, full episode, or clips. These lookup references are associated with the major business objects such as the media containers and media assets that are associated with the media container.
