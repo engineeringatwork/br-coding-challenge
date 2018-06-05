@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 
 import javax.annotation.PostConstruct;
 
@@ -63,10 +64,13 @@ public class ShowAssetFactory implements MediaAssetFactory
 	{
 		List<MediaAssetViewModel> mediaAssetViewModels = new ArrayList<MediaAssetViewModel>();
 		
-		for(MediaAsset mediaAsset : mediaAssets)
-		{
-			mediaAssetViewModels.add(transformMediaAssetToViewModel(mediaAsset));
-		}
+		mediaAssets.forEach(new Consumer<MediaAsset>() {
+
+			public void accept(MediaAsset mediaAsset) 
+			{
+				mediaAssetViewModels.add(transformMediaAssetToViewModel(mediaAsset));
+			}
+		});
 		
 		Collections.sort(mediaAssetViewModels);
 
