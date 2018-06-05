@@ -16,7 +16,16 @@
 ## Application Requirements
 1. Java 1.8
 2. Gradle 4.0
-3. Favorite IDE (Spring Tool Suite
+3. Favorite IDE (Eclipse, IntelliJ, etc)
+
+## Instructions for getting it running locally:
+1. Clone the repository or download the zip file.
+2. Unzip the folder if you downloaded the zip file.
+3. Bring in the project in your favorite IDE as a Gradle Project or if Windows recognizes gradle on PATH open a command prompt and redirect to the directory that the project was unzipped.
+4. Invoke the gradle command 'gradle clean build' to generate the executable jar. You should see a bootJar task get executed which will package the executable jar in the build\libs directory as rocket-coding-challenge-1.0.jar. 
+5. From there you can execute 'java -jar rocket-coding-challenge-1.0.jar' where you will see the following output.
+
+
 
 ## High Level Design Approach
 
@@ -38,10 +47,13 @@ If you want to access the Swagger API documentation, once the application is lau
 
 If you want to see a collection of shows that were loaded with sample media assets associated for the 2 shows loaded into the database you can invoke a GET request against http://localhost:8080/v1/bottlerocket/media/containers/types/SHOW to validate the results.
 
+You should see a representative JSON result come back from the API as shown here:
+
+![json_sample_output](https://user-images.githubusercontent.com/26190211/40957789-3e942e82-685c-11e8-98f9-e2a7e3c91486.GIF)
+
 If you want to see a specific show information and its associated media assets associated a user can invoke a GET request at http://localhost:8080/v1/bottlerocket/media/containers/{id} with the identifier for the media container based on the previous endpoint's response output.
 
 
 
 
-You should see the following JSON result come back from the API:
 
