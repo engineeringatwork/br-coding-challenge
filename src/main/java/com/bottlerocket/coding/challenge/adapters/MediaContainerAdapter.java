@@ -69,11 +69,14 @@ public class MediaContainerAdapter
 		
 		List<MediaContainerViewModel> mediaContainerViewModels = new ArrayList<MediaContainerViewModel>();
 		
-		for(MediaContainer mediaContainer : mediaContainers)
-		{
-			mediaContainerViewModels.add(transformMediaContainerToViewModel(mediaContainer));
-		}
+		mediaContainers.forEach(new Consumer<MediaContainer>() {
 
+			public void accept(MediaContainer mediaContainer) 
+			{
+				mediaContainerViewModels.add(transformMediaContainerToViewModel(mediaContainer));
+			}
+		});
+		
 		resultWrapper.setMediaContainers(mediaContainerViewModels);
 				
 		return resultWrapper;
