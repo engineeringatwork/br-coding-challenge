@@ -2,6 +2,8 @@ package com.bottlerocket.coding.challenge.adapters;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
+
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
