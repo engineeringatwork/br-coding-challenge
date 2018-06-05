@@ -15,8 +15,7 @@
 
 ## Application Requirements
 1. Java 1.8
-2. Gradle 4.0
-3. Favorite IDE (Eclipse, IntelliJ, etc)
+2. Gradle 4.0 (Building the deployment package)
 
 ## Instructions for getting it running locally:
 1. Clone the repository or download the zip file to a local file and unzip it.
